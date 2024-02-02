@@ -17,8 +17,8 @@ app.add_middleware(
 )
 
 @app.get("/get-response/")
-def getAiResponse(country: str):
+def getAiResponse(location: str):
 	"""
 	Use text ai model
 	"""
-	return {"data": model("./wether.csv", country=country)}
+	return {"data": model("./wether.csv", location=location)}
